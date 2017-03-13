@@ -1,48 +1,76 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely need to edit after that.
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'jekyll serve'. If you change this file, please restart the server process.
+# Site
+title:              Marc Delagrammatikas
+bio:                'Senior Software Engineer at TRUECar'
+description:        'Senior Software Engineer at TRUECar'
+reading_time:       true
+words_per_minute:   200
+logo:               'assets/img/logo.png'
+background:         'assets/img/bg.jpg'
+tiled_bg:           false   # Set this true if you want to tile your background image, otherwise it will be covered
+locale:             en_US
+url:                http://127.0.0.1:4000
 
-# Site settings
-title: Marc Delagrammatikas
-email: delagrammatikas@gmail.com
-description:
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site
+# Jekyll
+permalink:          /:title/
+markdown:           kramdown
+highlighter:        rouge
+kramdown:
+  auto_ids:         true
+  footnote_nr:      1
+  entity_output:    as_char
+  toc_levels:       1..6
+  enable_coderay:   false
+mathjax:            true
+sass:
+  sass_dir:         _sass
+  style:            compressed
 
-# Plugins
+# Comments
+disqus_shortname:   delagrammatikas
+
+# Social
+# if you don't have any of social below, comment the line.
+google:
+  #plus:            #username
+  analytics:        UA-45272312-2
+  #verify:
+  #ad-client:
+  #ad-slot:
+#bing-verify:
+email:              hello@marcdel.com
+twitter:            marcdel
+#facebook:          username
+github-url:         marcdel
+#stackoverflow:     123456/username   from a "http://stackoverflow.com/users/123456/username" link
+linkedin:           marcd
+#xing:              username
+#instagram:         username
+#lastfm:            username
+#tumblr:            username
+#medium:            '@username'
+#pinterest:         username
+#foursquare:        username
+#steam:             username
+#dribbble:          username
+#youtube:           username
+#youtube-channel:   channel
+#soundcloud:        username
+#weibo:             username
+#flickr:            username
+#codepen:           username
+#keybase:           username
+#xmpp:              username@server.com
+#hackernews:        username
+
+# Gems
 gems:
+  - jekyll-mentions
+  - jekyll-feed
   - jekyll-sitemap
-  - jekyll-seo-tag
+  - jekyll-gist
 
-# Identity
-your-name: Marc Delagrammatikas
-your-title: Senior Software Engineer
+jekyll-mentions:
+    base_url: https://github.com
 
-# Social settings
-500px_url:
-facebook_url:
-github_url: http://www.github.com/marcdel
-gitlab_url:
-googleplus_url:
-instagram_url:
-linkedin_url: http://www.linkedin.com/in/marcd
-pinterest_url:
-slack_url:
-twitter_url: http://www.twitter.com/marcdel
-
-# Build settings
-markdown: kramdown
-
-# Plugin: jekyll-seo-tag
-twitter:
-  username: marcdel
-# Add one or more of the following
-facebook:
-  app_id:
-  publisher:
-  admins:
-logo:
-google_site_verification:
+# Exclude list
+exclude: [README.md, Gemfile, Gemfile.lock, node_modules, gulpfile.js, package.json, _site, src, vendor, CNAME, LICENSE, Rakefile]
