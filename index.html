@@ -19,7 +19,7 @@
         <header id="header">
           <h1>Marc Delagrammatikas</h1>
           <!-- <p>Software Engineer</p> -->
-          <p>Software Engineer &nbsp;&bull;&nbsp; Mentor &nbsp;&bull;&nbsp; Aspiring Elixirist</p>
+          <p>Software Engineer &nbsp;&bull;&nbsp; Mentor &nbsp;&bull;&nbsp; Polyglot</p>
           <nav>
             <ul>
               <li><a href="https://github.com/marcdel" class="icon fa-github"><span class="label">Github</span></a></li>
@@ -49,8 +49,10 @@
       ga('create', 'UA-45272312-2', 'auto');
 
       ga('require', 'eventTracker');
-      ga('require', 'outboundLinkTracker');
       ga('require', 'urlChangeTracker');
+      ga('require', 'outboundLinkTracker', {
+        events: ['click', 'auxclick', 'contextmenu']
+      });
 
       ga('send', 'pageview');
     </script>
